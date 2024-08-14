@@ -1,0 +1,114 @@
+Assaignment 14-16 
+
+// 1. Declare an empty array using JS literal notation to store student names
+var studentNamesLiteral = [];
+
+// 2. Declare an empty array using JS object notation to store student names
+var studentNamesObject = new Array();
+
+// 3. Declare and initialize a strings array
+var stringArray = ["apple", "banana", "cherry"];
+
+// 4. Declare and initialize a numbers array
+var numberArray = [1, 2, 3, 4, 5];
+
+// 5. Declare and initialize a boolean array
+var booleanArray = [true, false, true];
+
+// 6. Declare and initialize a mixed array
+var mixedArray = ["John", 25, true];
+
+// 7. Declare and initialize an array of education qualifications in Pakistan
+var educationQualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+document.write("<h1>Qualifications in Pakistan:</h1>");
+document.write("<ol>");
+for (var i = 0; i < educationQualifications.length; i++) {
+    document.write("<li>" + educationQualifications[i] + "</li>");
+}
+document.write("</ol>");
+
+// 8. Store 3 student names and their scores, and display scores and percentages
+var studentNames = ["Ali", "Sara", "Zain"];
+var studentScores = [400, 450, 350];
+var totalMarks = 500;
+
+for (var i = 0; i < studentNames.length; i++) {
+    var percentage = (studentScores[i] / totalMarks) * 100;
+    document.write("Score of " + studentNames[i] + " is " + studentScores[i] + ". Percentage: " + percentage + "%<br>");
+}
+
+// 9. Initialize an array with color names
+var colorNames = ["Red", "Green", "Blue"];
+document.write("<h2>Original Colors: " + colorNames + "</h2>");
+
+// a. Ask the user to add a color to the beginning of the array
+var colorToAddBeginning = prompt("Enter a color to add at the beginning:");
+colorNames.unshift(colorToAddBeginning);
+document.write("<h2>Updated Colors: " + colorNames + "</h2>");
+
+// b. Ask the user to add a color to the end of the array
+var colorToAddEnd = prompt("Enter a color to add at the end:");
+colorNames.push(colorToAddEnd);
+document.write("<h2>Updated Colors: " + colorNames + "</h2>");
+
+// c. Add two colors to the beginning of the array
+colorNames.unshift("Purple", "Yellow");
+document.write("<h2>Colors after adding two at the beginning: " + colorNames + "</h2>");
+
+// d. Delete the first color in the array
+colorNames.shift();
+document.write("<h2>Colors after deleting the first color: " + colorNames + "</h2>");
+
+// e. Delete the last color in the array
+colorNames.pop();
+document.write("<h2>Colors after deleting the last color: " + colorNames + "</h2>");
+
+// f. Ask the user at which index to add a color and add it
+var indexToAdd = prompt("Enter the index to add a color:");
+var colorToAddIndex = prompt("Enter the color to add:");
+colorNames.splice(indexToAdd, 0, colorToAddIndex);
+document.write("<h2>Colors after adding at index " + indexToAdd + ": " + colorNames + "</h2>");
+
+// g. Ask the user which index to delete and how many colors to remove
+var indexToDelete = prompt("Enter the index to delete colors:");
+var numColorsToDelete = prompt("Enter the number of colors to delete:");
+colorNames.splice(indexToDelete, numColorsToDelete);
+document.write("<h2>Colors after deleting: " + colorNames + "</h2>");
+
+// 10. Sort student scores in ascending order
+var scores = [320, 230, 480, 120];
+scores.sort(function(a, b) { return a - b });
+document.write("<h2>Sorted Scores: " + scores + "</h2>");
+
+// 11. Initialize an array with city names and copy 3 cities to selectedCities
+var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+var selectedCities = cities.slice(1, 4);
+document.write("<h2>Selected Cities: " + selectedCities + "</h2>");
+
+// 12. Create a single string from an array using join
+var arr = ["This", " is", " my", " cat"];
+var singleString = arr.join("");
+document.write("<h2>Single String: " + singleString + "</h2>");
+
+// 13. FIFO - First In First Out
+var fifoArray = [];
+fifoArray.push("First");
+fifoArray.push("Second");
+fifoArray.push("Third");
+document.write("<h2>FIFO: " + fifoArray.shift() + ", " + fifoArray.shift() + ", " + fifoArray.shift() + "</h2>");
+
+// 14. LIFO - Last In First Out
+var lifoArray = [];
+lifoArray.push("First");
+lifoArray.push("Second");
+lifoArray.push("Third");
+document.write("<h2>LIFO: " + lifoArray.pop() + ", " + lifoArray.pop() + ", " + lifoArray.pop() + "</h2>");
+
+// 15. Store phone manufacturers and display a dropdown menu
+var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+document.write("<h2>Select Phone Manufacturer:</h2>");
+document.write("<select>");
+for (var i = 0; i < phoneManufacturers.length; i++) {
+    document.write("<option>" + phoneManufacturers[i] + "</option>");
+}
+document.write("</select>");
