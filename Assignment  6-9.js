@@ -81,3 +81,9 @@ var number = 10; // You can change this number to anything you want
 var result = ((number + 5) * 10) / 2;
 
 console.log("Result after performing (number + 5) * 10 / 2: " + result);
+
+
+
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
